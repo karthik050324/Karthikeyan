@@ -1,0 +1,24 @@
+package com.example.app.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.app.Model.IplauctModel;
+import com.example.app.Service.IplauctService;
+
+@RestController
+public class IplauctControl
+{
+@Autowired
+public IplauctService iser;
+@PostMapping("/iplpost")
+public List<IplauctModel> addDetails(@RequestBody IplauctModel ip)
+{
+	return iser.saveInfo(ip);
+}
+
+}

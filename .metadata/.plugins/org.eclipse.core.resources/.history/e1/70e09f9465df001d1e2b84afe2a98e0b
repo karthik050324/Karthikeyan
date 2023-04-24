@@ -1,0 +1,22 @@
+package com.Punnagai.demo.Controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class PunnagaiFamily
+{
+    @GetMapping("/tell")
+   	public String Bekandiis(@RequestParam String username)
+   	{
+		if(username.equals("admin")&& password.equals("12345"))
+    	{
+   		return "LandingPage Is Succesful "+ username;
+    	}
+    	else
+    	{
+    		return"Login Failed please check your username and password";
+    	}
+   	}
+}

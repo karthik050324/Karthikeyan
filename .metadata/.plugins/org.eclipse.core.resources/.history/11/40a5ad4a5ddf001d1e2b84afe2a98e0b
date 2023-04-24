@@ -1,0 +1,21 @@
+package com.Punnagai.demo.Controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class PunnagaiFamily {
+    @GetMapping("/Signin")
+	public String Punnagai()
+	{
+		return "SignPageIsSuccessful";
+	}
+    
+    @GetMapping("/LandingPage/{username}")
+   	public String Bekandiis(@PathVariable("username") String username)
+   	{
+   		return "LandingPage Is Succesful "+ username;
+   	}
+
+}

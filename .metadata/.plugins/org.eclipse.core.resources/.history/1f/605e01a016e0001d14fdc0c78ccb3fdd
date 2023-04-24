@@ -1,0 +1,5 @@
+package com.Punnagai.demo.dao;
+
+public interface StudentRepositery {
+
+}
