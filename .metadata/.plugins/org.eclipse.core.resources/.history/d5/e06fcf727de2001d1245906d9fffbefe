@@ -1,7 +1,0 @@
-package com.example.app.Repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface IplauctRepository extends JpaRepository<T, ID> {
-
-}
