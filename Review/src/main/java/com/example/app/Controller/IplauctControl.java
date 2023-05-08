@@ -22,7 +22,7 @@ public class IplauctControl
 {
 @Autowired
 public IplauctService iser;
-@PostMapping("/iplpost")
+@PostMapping("/iplpost ")
 public iplauct_model addDetails(@RequestBody iplauct_model ip)
 {
 	return iser.saveInfo(ip);

@@ -4,18 +4,18 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.app.Repository.PersonRepo;
-import com.example.app.Model.Person;
+import com.example.app.Repository.IplRepo;
+import com.example.app.Model.IplTeam;
 @Service
-public class PersonService
+public class IplteamService
 {
 @Autowired
- PersonRepo prepo;
- public List<Person> getPerson()
+ IplRepo prepo;
+ public List<IplTeam> getPerson()
  {
 	 return prepo.findAll();
  }
- public Person postPerson(Person p)
+ public IplTeam postPerson(IplTeam p)
  {
 	 return prepo.save(p);
  }

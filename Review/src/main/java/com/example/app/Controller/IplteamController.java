@@ -8,24 +8,24 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.app.Model.Person;
-import com.example.app.Service.PersonService;
+import com.example.app.Model.IplTeam;
+import com.example.app.Service.IplteamService;
 
 @RestController
-public class PersonController {
+public class IplteamController {
 
 	@Autowired
-	PersonService pservice;
+	IplteamService pservice;
 	
 	
 	@GetMapping("/getPersons")
-	public List<Person> findAll()
+	public List<IplTeam> findAll()
 	{
 		return pservice.getPerson();
 	}
 	
 	@PostMapping("/postPersons")
-	public Person addPersons(@RequestBody Person p)
+	public IplTeam addPersons(@RequestBody IplTeam p)
 	{
 		return pservice.postPerson(p);
 	}

@@ -20,7 +20,8 @@ public interface IplauctRepository extends JpaRepository<iplauct_model, Integer>
 	@Modifying 
 	@Query("delete from iplauct_model s where s.pname=?1")
 	public int deleteStudentByPname(String pname);
-	@Modifying
+	@Modifying 
+	 
 	@Query("update iplauct_model s set s.pteam=?1 where s.pname=?2")
 	public int updateStudentByName(String department, String name);
 	List<iplauct_model>findByPnameStartingWith(String Prefix);
